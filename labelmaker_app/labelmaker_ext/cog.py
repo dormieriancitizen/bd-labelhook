@@ -35,7 +35,7 @@ class LabelmakerCog(commands.Cog):
 
                 for label in labels:
 
-                    async def callback(interaction: Interaction["BallsDexBot"]):
+                    async def callback(interaction: Interaction["BallsDexBot"], label=label):
                         await interaction.response.send_message(
                             self.format_response(interaction, label.response), ephemeral=label.ephemeral
                         )
